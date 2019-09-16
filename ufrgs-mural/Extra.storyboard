@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recortar foto-->
+        <scene sceneID="eY5-ta-nse">
+            <objects>
+                <viewController storyboardIdentifier="imageResizerController" title="Recortar foto" id="s8V-hG-YyT" customClass="ImageResizerController" customModule="ufrgs_mural" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mwa-KX-ThH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxE-LR-QCh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JXs-f2-wop"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.20000000000000001" green="0.21176470589999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title=" Edição de foto" id="Y33-kT-CEK">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="haH-IR-Bd1">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="cancel:" destination="s8V-hG-YyT" id="3sN-J7-BWe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Ok" id="07m-Fb-kwq">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="save:" destination="s8V-hG-YyT" id="KQQ-cD-jhE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRw-Da-U9U" userLabel="ContainerView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.21176470589999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.21176470589999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oRw-Da-U9U" firstAttribute="leading" secondItem="aha-wb-za5" secondAttribute="leading" id="AvA-rh-b5g"/>
+                            <constraint firstItem="KxE-LR-QCh" firstAttribute="top" secondItem="aha-wb-za5" secondAttribute="top" id="OvQ-1B-TNO"/>
+                            <constraint firstItem="aha-wb-za5" firstAttribute="trailing" secondItem="KxE-LR-QCh" secondAttribute="trailing" id="av0-oC-0nr"/>
+                            <constraint firstItem="aha-wb-za5" firstAttribute="trailing" secondItem="oRw-Da-U9U" secondAttribute="trailing" id="kg8-Z7-yXg"/>
+                            <constraint firstItem="oRw-Da-U9U" firstAttribute="top" secondItem="KxE-LR-QCh" secondAttribute="bottom" id="m8e-Ul-TVT"/>
+                            <constraint firstItem="KxE-LR-QCh" firstAttribute="leading" secondItem="aha-wb-za5" secondAttribute="leading" id="pYm-ZE-LPF"/>
+                            <constraint firstItem="aha-wb-za5" firstAttribute="bottom" secondItem="oRw-Da-U9U" secondAttribute="bottom" id="yRF-40-w2Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aha-wb-za5"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="oRw-Da-U9U" id="6AT-ER-ClH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EkU-XN-uIc" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
